@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>ADMIN</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" type="text/css" />
+
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./js/header.js"></script>
+        <script src="http://oksusumarket.co.kr/js/COMMON.js"></script>
+
+        <script>
+			//javascript 전역 변수 설정		
+			var URL			 = "http://oksusumarket.co.kr";
+			var ADMIN_URL 	 = "http://oksusumarket.co.kr/admin";
+			var INCLUDE_URL  = "http://oksusumarket.co.kr/include";
+			var IMAGES_URL 	 = "http://oksusumarket.co.kr/uploads";
+			var API_KEY		 = "123456789";
+			
+			//member infor
+            var ADMIN_ID 	 = "";
+            
+            var w = COMMON.url.urlParameter("w") == "" ? null : COMMON.url.urlParameter("w");
+        </script>  
+
+    </head>
+
+    <style>
+
+    </style>
+
+    <body>
+        <div class="wrap">
+
+            <div class="header">
+                <div class="hd_img"><img src="./images/logo.jpg" alt=""></div>
+                <div class="hd_menu_box">
+                    <div class="hbm_menu">
+                        <ul>
+                            <li><a href="" class = "color_00c752">옥수수마켓 바로가기</a></li>
+                            <li><a href="">admin</a></li>
+                            <li class = "logout">로그아웃</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <div class="left_content">
+                    <div class="left_menu">
+                        <div class="menu_box">
+                            <div class="menu_btn">
+                                <img src="./images/icon_1.png" alt="">
+                                챠트
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="menu_hide">
+                                <ul>
+                                    <li><a href="#">회원</a></li>
+                                    <li><a href="#">주문</a></li>
+                                </ul>#                          </div>
+                        </div>
+
+                        <div class="menu_box">
+                            <div class="menu_btn">
+                                <img src="./images/icon_2.png" alt="">
+                                설정
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="menu_hide">
+                                <ul>
+                                    <li><a href="#">관리자목록</a></li>
+                                    <li><a href="#">카테고리</a></li>
+                                    <li><a href="#">행정구역</a></li>
+                                    <li><a href="#">수수료</a></li>
+                                    <li><a href="#">옥수수 설명서</a></li>
+                                    <li><a href="#">Aligo</a></li>
+                                    <li><a href="#">HDD</a></li>
+                                    <li><a href="#">HardWare</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu_box">
+                            <div class="menu_btn">
+                                <img src="./images/icon_3.png" alt="">
+                                회원
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="menu_hide">
+                                <ul>
+                                    <li><a href="#">전체</a></li>
+                                    <li><a href="#">일반</a></li>
+                                    <li><a href="#">판매</a></li>
+                                    <li><a href="#">추천인 순위</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu_box">
+                            <div class="menu_btn">
+                                <img src="./images/icon_4.png" alt="">
+                                상품
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="menu_hide">
+                                <ul>
+                                    <li><a href="#">전체</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu_box">
+                            <div class="menu_btn">
+                                <img src="./images/icon_5.png" alt="">
+                                주문
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="menu_hide">
+                                <ul>
+                                    <li><a href="#">상품 주문</a></li>
+                                    <li><a href="#">등록 주문</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu_box">
+                            <div class="menu_btn">
+                                <img src="./images/icon_6.png" alt="">
+                                정산
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="menu_hide">
+                                <ul>
+                                    <li><a href="#">정산</a></li>
+                                    <li><a href="#">추천인 정산</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu_box">
+                            <div class="menu_btn">
+                                <img src="./images/icon_7.png" alt="">
+                                보드
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="menu_hide">
+                                <ul>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">Q&A</a></li>
+                                    <li><a href="#">삽니다</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu_box">
+                            <div class="menu_btn">
+                                <img src="./images/icon_8.png" alt="">
+                                내용
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="menu_hide">
+                                <ul>
+                                    <li><a href="#">전체</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu_box">
+                            <div class="menu_btn">
+                                <img src="./images/icon_9.png" alt="">
+                                로그
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="menu_hide">
+                                <ul>
+                                    <li><a href = "#">SMS</a></li>
+                                    <li><a href = "#">email</a></li>
+                                    <li><a href = "#">nice</a></li>
+                                    <li><a href = "#">order</a></li>
+                                    <li><a href = "#">ms_order</a></li>                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu_box">
+                            <div class="menu_btn">
+                                <img src="./images/icon_10.png" alt="">
+                                팝업
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="menu_hide">
+                                <ul>
+                                    <li><a href="#">전체</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="right_content">
+
+                    <form id = "modi_form" name = "modi_form" method="post" action = "product_modify_update.php" onsubmit="return form_submit(this);" enctype="multipart/form-data">
+
+                        <!--input hidden-->
+                        <input type = "hidden" id = "w" name = "w" value = "w">
+                        <input type = "hidden" id = "seq" name = "seq" value = "1">
+                        <input type = "hidden" id = "page" name = "page" value = "1">
+                        <!--input hidden-->
+
+                        <div class="rc_top text_20_b">PRODUCT 등록/수정</div>
+
+                        <div class="rc_w_middle">
+
+                            <div class="rcm_subject">기본 정보</div>
+                            <table>
+
+                                <colgroup>
+                                    <col width="8%">
+                                    <col width="42%">
+                                    <col width="8%">
+                                    <col width="42%">
+                                </colgroup>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>Approval</td>
+                                        <td>
+                                            <input type = "radio" id = "pd_approval" name = "pd_approval" value = "Y"> Y
+                                            <input type = "radio" id = "pd_approval" name = "pd_approval" value = "N"> N
+                                        </td>
+
+                                        <td></td>
+                                        <td>
+                                            
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="rcm_subject">카테고리</div>
+                            <table>
+
+                                <colgroup>
+                                    <col width="8%">
+                                    <col width="42%">
+                                    <col width="8%">
+                                    <col width="42%">
+                                </colgroup>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>Category</td>
+                                        <td></td>
+
+                                        <td>SubCategory</td>
+                                        <td>
+                                            <span id = "c_sub_del"></span>
+                                            <span id = "c_sub_ins"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="rcm_subject">상품 정보</div>
+                            <table>
+
+                                <colgroup>
+                                    <col width="8%">
+                                    <col width="42%">
+                                    <col width="8%">
+                                    <col width="42%">
+                                </colgroup>
+
+                                <tbody>
+                                    <tr>
+                                        <td>ProductName</td>
+                                        <td><input type="text" name="pd_name" id="pd_name" value = ""></td>
+
+                                        <td>Email</td>
+                                        <td><input type="text" class = "text_r" name="pd_price" id="pd_price" value = "" onkeyup="COMMON.form.inputNumComma(this)"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>재고</td>
+                                        <td><input type="text" class = "text_r" name="pd_amount" id="pd_amount" value = "" onkeyup="COMMON.form.inputNumComma(this)"></td>
+
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="rcm_subject">Product Info</div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><textarea id="pd_content" name="pd_content"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="rcm_subject">Image</div>
+                            <table>
+                                <colgroup>
+                                    <col width="8%">
+                                    <col width="42%">
+                                    <col width="8%">
+                                    <col width="42%">
+                                </colgroup>
+
+                                <tbody>
+                                    <tr>
+                                        <td>IMG_1</td>
+                                        <td colspan=3>
+                                            <input name="myfile[]" type="file">
+                                            &nbsp;
+                                            [ 파일삭제 ]&nbsp;<input type="checkbox" name="f_chk[]" value = "0">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>IMG_2</td>
+                                        <td colspan=3>
+                                            <input name="myfile[]" type="file">
+                                            &nbsp;
+                                            [ 파일삭제 ]&nbsp;<input type="checkbox" name="f_chk[]" value = "1">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>IMG_3</td>
+                                        <td colspan=3>
+                                            <input name="myfile[]" type="file">
+                                            &nbsp;
+                                            [ 파일삭제 ]&nbsp;<input type="checkbox" name="f_chk[]" value = "2">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="rcm_subject">등록 / 수정일</div>
+                            <table>
+                                <colgroup>
+                                    <col width="8%">
+                                    <col width="42%">
+                                    <col width="8%">
+                                    <col width="42%">
+                                </colgroup>
+
+                                <tbody>
+                                    <tr>
+                                        <td>등록일</td>
+                                        <td>2020-02-25 15:25:26</td>
+                                        <td>수정일</td>
+                                        <td>2020-02-25 15:25:26</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+
+                        <div class="rc_bottom form_btn">
+                            <center>
+                                <input type="submit" class = "wm_btn" value="등록">
+                                <input type="button" class = "cancel_btn" value="취소">
+                            </center>                            
+                        </div>
+                    </form>                    
+
+                </div>
+
+
+
+<script>
+$("document").ready(function(){
+
+    if(w == "w")
+	{		
+		$('input:radio[name=pd_approval]:input[value=N]').attr("checked", true);
+	}	
+
+	$("#pd_category").click(function(){									
+		if($("#pd_category option:selected").val() != 0 || $("#pd_category option:selected").val() != "" )
+		{
+			$("#sub_del").remove();
+			$("#sub_ins").load(URL + "/include/lib/ajax/ajax_category_sub_select.php" , {"value" : $("#pd_category option:selected").val()});
+		}									
+	});		    
+
+});
+
+
+
+//form input value check
+function form_submit(f)
+{
+	//var biz_client 		= f.biz_client.value;
+	if(w == "w")
+	{
+		var conf = confirm("등록 하시겠습니까?");
+	}
+	else
+	{
+		var conf = confirm("수정 하시겠습니까?");
+	}
+	
+	if(conf == true)
+	{	
+		submitContents(f);
+		return true;
+		
+	}
+	else
+	{
+		return false;
+	}
+	//return true;
+}
+
+</script>                
+
+            </div>
+
+            <div class="footer">
+            
+            </div>
+
+        </div>
+    </body>
+</html> 
