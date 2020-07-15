@@ -74,8 +74,9 @@ select {border:1px solid #dddddd; border-radius:5px; padding:5px; outline: none;
 .wrap .content .right_content .rc_search_box .rcsb_right form input[type=text] {position:relative; top:-2px; height:19px; outline: none; }
 .wrap .content .right_content .rc_search_box .rcsb_right form input[type=submit] {color:#ffffff; background-color: #85b0ca; padding:5px 20px; }
 
-.wrap .content .right_content .rc_w_middle table, .wrap .content .right_content .rc_w_middle td {border:none;}
-.wrap .content .right_content .rc_w_middle .rcm_subject {font-size:15px; padding:8px 0px; margin-top:25px; font-weight:bold; border-bottom:1px solid #b9cad4; color:#00c752;}
+/* .wrap .content .right_content .rc_w_middle table, .wrap .content .right_content .rc_w_middle td {border:none;} */
+.wrap .content .right_content .rc_w_middle .rcm_subject {font-size:15px; padding:8px 0px; margin-top:25px; font-weight:bold; border-bottom:1px solid #b9cad4; color: #021548; }
+.wrap .content .right_content .rc_w_middle .rcm_subject i { color:#fc637d; }
 .wrap .content .right_content .rc_w_middle input[type=text] {width:99%; border:1px solid #b9cad4; border-radius:5px; padding:5px 0;}
 
 .wrap .content .right_content .rc_btn_box {width:100%; padding:5px 0px; }
@@ -125,7 +126,7 @@ select {border:1px solid #dddddd; border-radius:5px; padding:5px; outline: none;
 
 /** board list background color */
 .bg_0 {background-color:#ffffff;}
-.bg_1 {background-color: #f7f7f7; }
+.bg_1 {background: #f2f5f9; }
 .bg_c_88d079 {background-color: #88d079;}
 .bg_c_90c1cc {background-color: #90c1cc;}
 .icon_img {position:relative; top:5px; padding-right:10px;}

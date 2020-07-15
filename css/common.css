@@ -1,9 +1,15 @@
-
+.border_none { border: none; }
+.f_white_color { color: white; }
+.bg_sms_color { background-color: #64c19d;}
 .over_hidden { overflow: hidden; }
 .over_visible { overflow: visible; }
 .word_break { word-break: keep-all; }
 .white_space { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; display: block; }
-
+.fa-reply {
+    transform: rotate(180deg);
+    padding: 0px 7px;
+    color: #2a4d8c !important;
+}
 /*text-align*/
 .t_left { text-align: left; }
 .t_center { text-align: center; }

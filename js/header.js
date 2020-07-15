@@ -39,15 +39,15 @@ $("document").ready(function(){
     }    
 
     $(".menu_hide > ul > li").each(function(i){
-        $(this).click(function(e){
-            e.preventDefault();
+        $(this).click(function(){
+            // e.preventDefault();
 
             $(".menu_hide > ul > li").css("color", "#ffffff");
             $(this).css("color","#fc637d").css("font-weight","bold");
             COMMON.cookie.setCookie("menu_sub_active", "mas_" + i, "undefined");
             
-            var link = $(this).children().attr("href");
-            location.href = link;
+            // var link = $(this).children().attr("href");
+            // location.href = link;
         });
     });
 

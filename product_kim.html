@@ -56,13 +56,13 @@
                             <div class="menu_hide">
                                 <ul>
                                     <li><a href="#">기본설정</a></li>
-                                    <li><a href="../recover_admin/admin_list.html">관리자목록</a></li>
-                                    <li><a href="../recover_admin/admin_list.html">관리자설정</a></li>
-                                    <li><a href="../recover_admin/category_list.html">카테고리</a></li>
-                                    <li><a href="../recover_admin/promotion_list.html">promotion</a></li>
+                                    <li><a href="#">관리자목록</a></li>
+                                    <li><a href="#">관리자설정</a></li>
+                                    <li><a href="#">카테고리</a></li>
+                                    <li><a href="#">promotion</a></li>
                                     <li><a href="#">HDD</a></li>
                                     <li><a href="#">HardWare</a></li>
-                                    <li><a href="../recover_admin/product_kim.html">KYM</a></li>
+                                    <li><a href="#">KYM</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -203,21 +203,12 @@
 
                     <div class="rc_top text_20_b">
                         <div class="rct_left">
-                            <img class = "icon_img" src="./images/icons_7.png" alt="">관리자 리스트(2)
+                            <img class = "icon_img" src="./images/icons_7.png" alt="">PRODUCT KIM(19,397)
                         </div>
 
                         <div class="rct_right">
                             <button class = "btn_w" fname="admin_modify">등록</button>
                         </div>
-
-                        <!-- <div class="rct_right">
-                            <button class = "btn_excel">정산</button>
-                            <span>
-                                <input type="radio" name="list_radio" id="list_group" value = "cal" checked>정산
-                                &nbsp;
-                                <input type="radio" name="list_radio" id="list_all" value = "all">전체
-                            </span>                            
-                        </div> -->
                     </div>
 
                     <div class="rc_search_box">
@@ -248,23 +239,29 @@
                         <table>
                             <colgroup>
                                 <col width="3%">
+                                <col width="5%">
+                                <col width="5%">
                                 <col width="7%">
-                                <col width="10%">
-                                <col width="10%">
                                 <col width="*">
-                                <col width="10%">
+                                <col width="7%">
+                                <col width="7%">
+                                <col width="7%">
+                                <col width="7%">
                                 <col width="7%">
                             </colgroup>
 
                             <thead>
                                 <tr>
                                     <th><input type="checkbox" name="chk_all" class="chk_all"></th>
-                                    <th>번호<i class="fas fa-sort"></i></th>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>등록/수정일</th>
-                                    <th>RegDate<i class="fas fa-sort"></i></th>
-                                    <th>수정 / 삭제</th>
+                                    <th>num<i class="fas fa-sort"></i></th>
+                                    <th>type</th>
+                                    <th>supply</th>
+                                    <th>name</th>
+                                    <th>price<i class="fas fa-sort"></i></th>
+                                    <th>supplyPrice</th>
+                                    <th>minPrice</th>
+                                    <th>naverPrice</th>
+                                    <th>reg_date</th>
                                 </tr>
                             </thead>
 
@@ -272,14 +269,27 @@
                                 <tr class = "bg_<?php echo $i%2;?>">
                                     <td class = "t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
                                     <td class = "t_center seq">1</td>
-                                    <td class = "t_center">admin</td>
-                                    <td class="t_center">관리자</td>
-                                    <td class="t_center">2019-09-27 17:46:43 / 2019-09-27 17:46:43</td>
-                                    <td class = "t_center">2020-02-25</td>
-                                    <td class = "t_center">
-                                        <input type="button" value="수정" class="btn_u" fname="admin_modify">
-                                        <input type="button" value="삭제" class="btn_d" fname="admin_modify">
-                                    </td>
+                                    <td class = "t_center">food</td>
+                                    <td class="t_center">스마트웹</td>
+                                    <td class="t_center">P-예가체프커피100g 루왁커</td>
+                                    <td class = "t_center">10,500</td>
+                                    <td class = "t_center">9,240</td>
+                                    <td class = "t_center">9,090</td>
+                                    <td class = "t_center">5,740</td>
+                                    <td class = "t_center">2020-05-27</td>
+                                </tr>
+
+                                <tr class = "bg_1">
+                                    <td class = "t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class = "t_center seq">1</td>
+                                    <td class = "t_center">food</td>
+                                    <td class="t_center">스마트웹</td>
+                                    <td class="t_center">P-예가체프커피100g 루왁커</td>
+                                    <td class = "t_center">10,500</td>
+                                    <td class = "t_center">9,240</td>
+                                    <td class = "t_center">9,090</td>
+                                    <td class = "t_center">5,740</td>
+                                    <td class = "t_center">2020-05-27</td>
                                 </tr>
                             </tbody>
                         </table>

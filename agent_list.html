@@ -22,10 +22,8 @@
 			var INCLUDE_URL  = "http://oksusumarket.co.kr/include";
 			var IMAGES_URL 	 = "http://oksusumarket.co.kr/uploads";
 			var API_KEY		 = "123456789";
-			
 			//member infor
             var ADMIN_ID 	 = "";
-            
             var w = COMMON.url.urlParameter("w") == "" ? null : COMMON.url.urlParameter("w");
         </script>  
     </head>
@@ -74,12 +72,12 @@
 
                             <div class="menu_hide">
                                 <ul>
-                                    <li><a href="#">전체</a></li>
-                                    <li><a href="#">포인트</a></li>
+                                    <li><a href="../recover_admin/mb_list.html">전체</a></li>
+                                    <li><a href="">포인트</a></li>
                                     <li><a href="#">캐쉬</a></li>
                                     <li><a href="#">캐쉬 출금 신청</a></li>
                                     <li><a href="#">패스워드 찾기</a></li>
-                                    <li><a href="#">over_member</a></li>
+                                    <li><a href="../recover_admin/member_over_list.html">over_member</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -200,10 +198,9 @@
                 </div>
 
                 <div class="right_content">
-
                     <div class="rc_top text_20_b">
                         <div class="rct_left">
-                            <img class = "icon_img" src="./images/icons_7.png" alt="">관리자 리스트(2)
+                            <img class = "icon_img" src="./images/icons_11.png" alt="">하위몰 관리 (3)
                         </div>
 
                         <div class="rct_right">
@@ -221,8 +218,10 @@
                     </div>
 
                     <div class="rc_search_box">
-
                         <div class="rcsb_left">
+                            <ul>
+                                <li><span class="fw_bold">상세검색</span></li>
+                            </ul>
                         </div>
 
                         <div class="rcsb_right">
@@ -247,42 +246,80 @@
                     <div class="rc_middle">
                         <table>
                             <colgroup>
+                                <col width="2%">
+                                <col width="2%">
+                                <col width="2%">
+                                <col width="5%">
+                                <col width="5%">
                                 <col width="3%">
-                                <col width="7%">
-                                <col width="10%">
-                                <col width="10%">
-                                <col width="*">
-                                <col width="10%">
-                                <col width="7%">
+                                <col width="15%">
+                                <col width="5%">
+                                <col width="6%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
                             </colgroup>
 
                             <thead>
                                 <tr>
                                     <th><input type="checkbox" name="chk_all" class="chk_all"></th>
-                                    <th>번호<i class="fas fa-sort"></i></th>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>등록/수정일</th>
-                                    <th>RegDate<i class="fas fa-sort"></i></th>
+                                    <th>seq</th>
+                                    <th>approval</th>
+                                    <th>mb_id</th>
+                                    <th>API_KEY</th>
+                                    <th>name</th>
+                                    <th>url</th>
+                                    <th>tel</th>
+                                    <th>mobile</th>
+                                    <th>신청일</th>
+                                    <th>등록일</th>
                                     <th>수정 / 삭제</th>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                <tr class = "bg_<?php echo $i%2;?>">
-                                    <td class = "t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
-                                    <td class = "t_center seq">1</td>
-                                    <td class = "t_center">admin</td>
-                                    <td class="t_center">관리자</td>
-                                    <td class="t_center">2019-09-27 17:46:43 / 2019-09-27 17:46:43</td>
-                                    <td class = "t_center">2020-02-25</td>
-                                    <td class = "t_center">
+                                <tr class = "bg_0">
+                                    <td class="t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class="t_center seq">2</td>
+                                    <td class="t_center">Y</td>
+                                    <td class="t_center">test123</td>
+                                    <td class="t_center">cc03e747a6afbbcbf8be7668acfebee5</td>
+                                    <td class="t_center">테스트몰_2</td>
+                                    <td class="t_center">http://wwww.test.com</td>
+                                    <td class="t_center">010-7777-9999</td>
+                                    <td class="t_center">010-7777-9999</td>
+                                    <td class="t_center">2019-10-28</td>
+                                    <td class="t_center">2020-03-11 14:16:03</td>
+                                    <td class="t_center">
+                                        <input type="button" value="수정" class="btn_u" fname="admin_modify">
+                                        <input type="button" value="삭제" class="btn_d" fname="admin_modify">
+                                    </td>
+                                </tr>
+
+                                <tr class = "bg_1">
+                                    <td class="t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class="t_center seq">1</td>
+                                    <td class="t_center">Y</td>
+                                    <td class="t_center">test123</td>
+                                    <td class="t_center">cc03e747a6afbbcbf8be7668acfebee5</td>
+                                    <td class="t_center">테스트몰_1</td>
+                                    <td class="t_center">http://wwww.test.com</td>
+                                    <td class="t_center">010-7777-9999</td>
+                                    <td class="t_center">010-7777-9999</td>
+                                    <td class="t_center">2019-10-28</td>
+                                    <td class="t_center">2020-03-11 14:16:03</td>
+                                    <td class="t_center">
                                         <input type="button" value="수정" class="btn_u" fname="admin_modify">
                                         <input type="button" value="삭제" class="btn_d" fname="admin_modify">
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    
+                    <div class="rc_bottom form_btn t_left">
+                        <input type="submit" class = "" value="선택 삭제">
+                        <input type="button" class = "" value="승인">
                     </div>
 
                     <div class="rc_bottom">
@@ -291,7 +328,6 @@
                     </div>
                 </div>                
             </div>
-
             <div class="footer">
             </div>
         </div>

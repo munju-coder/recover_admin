@@ -22,13 +22,18 @@
 			var INCLUDE_URL  = "http://oksusumarket.co.kr/include";
 			var IMAGES_URL 	 = "http://oksusumarket.co.kr/uploads";
 			var API_KEY		 = "123456789";
-			
 			//member infor
             var ADMIN_ID 	 = "";
-            
             var w = COMMON.url.urlParameter("w") == "" ? null : COMMON.url.urlParameter("w");
         </script>  
     </head>
+
+    <style>
+        /*product_qa_list(상품 > 상품문의)*/
+        .rc_middle table tbody .pr_info { padding: 10px; }
+        .rc_middle table tbody .pr_info  div { float: left; }
+        .rc_middle table tbody .pr_info::after { content: ''; display: block; overflow: hidden; clear: both; }
+    </style>
 
     <body>
         <div class="wrap">
@@ -74,8 +79,8 @@
 
                             <div class="menu_hide">
                                 <ul>
-                                    <li><a href="#">전체</a></li>
-                                    <li><a href="#">포인트</a></li>
+                                    <li><a href="../recover_admin/mb_list.html">전체</a></li>
+                                    <li><a href="">포인트</a></li>
                                     <li><a href="#">캐쉬</a></li>
                                     <li><a href="#">캐쉬 출금 신청</a></li>
                                     <li><a href="#">패스워드 찾기</a></li>
@@ -200,14 +205,13 @@
                 </div>
 
                 <div class="right_content">
-
                     <div class="rc_top text_20_b">
                         <div class="rct_left">
-                            <img class = "icon_img" src="./images/icons_7.png" alt="">관리자 리스트(2)
+                            <img class = "icon_img" src="./images/icons_15.png" alt="">상품문의 (2)
                         </div>
 
                         <div class="rct_right">
-                            <button class = "btn_w" fname="admin_modify">등록</button>
+                            <!-- <button class = "btn_w" fname="admin_modify">등록</button> -->
                         </div>
 
                         <!-- <div class="rct_right">
@@ -221,8 +225,10 @@
                     </div>
 
                     <div class="rc_search_box">
-
                         <div class="rcsb_left">
+                            <!-- <ul>
+                                <li><span class="fw_bold">상세검색</span></li>
+                            </ul> -->
                         </div>
 
                         <div class="rcsb_right">
@@ -247,42 +253,74 @@
                     <div class="rc_middle">
                         <table>
                             <colgroup>
-                                <col width="3%">
+                                <col width="2%">
+                                <col width="2%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
                                 <col width="7%">
-                                <col width="10%">
-                                <col width="10%">
-                                <col width="*">
-                                <col width="10%">
-                                <col width="7%">
+                                <col width="18%">
+                                <col width="5%">
                             </colgroup>
 
                             <thead>
                                 <tr>
                                     <th><input type="checkbox" name="chk_all" class="chk_all"></th>
-                                    <th>번호<i class="fas fa-sort"></i></th>
+                                    <th>번호</th>
+                                    <th>승인</th>
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>등록/수정일</th>
-                                    <th>RegDate<i class="fas fa-sort"></i></th>
-                                    <th>수정 / 삭제</th>
+                                    <th>PD info</th>
+                                    <th>문의내용</th>
+                                    <th>등록일<i class="fas fa-sort"></i></th>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                <tr class = "bg_<?php echo $i%2;?>">
-                                    <td class = "t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
-                                    <td class = "t_center seq">1</td>
-                                    <td class = "t_center">admin</td>
-                                    <td class="t_center">관리자</td>
-                                    <td class="t_center">2019-09-27 17:46:43 / 2019-09-27 17:46:43</td>
-                                    <td class = "t_center">2020-02-25</td>
-                                    <td class = "t_center">
-                                        <input type="button" value="수정" class="btn_u" fname="admin_modify">
-                                        <input type="button" value="삭제" class="btn_d" fname="admin_modify">
+                                <tr class = "bg_0">
+                                    <td class="t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class="t_center seq">2</td>
+                                    <td class="t_center">Y</td>
+                                    <td class="t_center">test1</td>
+                                    <td class="t_center">test1</td>
+                                    <td class="t_center pr_info">
+                                        <div class="w30 mt10px"><img class="w100" src="../recover_admin/images/product_1.png" alt="product_1 image"></div>
+                                        <div class="w70 mt10px">
+                                            <ul>
+                                                <li>상품명 : <span>여성 더블 후드 트레이닝 3종 세트</span></li>
+                                                <li>가격 : <span>80,000</span>원</li>
+                                            </ul>
+                                        </div>
                                     </td>
+                                    <td class="t_center">상품문의드립니다.<br><i class="fas fa-reply"></i>문제없는거에요~</td>
+                                    <td class="t_center">2019-10-14 09:27:23</td>
+                                </tr>
+
+                                <tr class = "bg_1">
+                                    <td class="t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class="t_center seq">1</td>
+                                    <td class="t_center">Y</td>
+                                    <td class="t_center">test1</td>
+                                    <td class="t_center">test1</td>
+                                    <td class="t_center pr_info">
+                                        <div class="w30 mt10px"><img class="w100" src="../recover_admin/images/product_1.png" alt="product_1 image"></div>
+                                        <div class="w70 mt10px">
+                                            <ul>
+                                                <li>상품명 : <span>여성 더블 후드 트레이닝 3종 세트</span></li>
+                                                <li>가격 : <span>80,000</span>원</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td class="t_center">상품문의드립니다.<br><i class="fas fa-reply"></i>문제없는거에요~</td>
+                                    <td class="t_center">2019-10-14 09:27:23</td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    
+                    <div class="rc_bottom form_btn t_left">
+                        <input type="submit" class = "" value="선택 삭제">
+                        <input type="button" class = "" value="승인">
                     </div>
 
                     <div class="rc_bottom">
@@ -291,7 +329,6 @@
                     </div>
                 </div>                
             </div>
-
             <div class="footer">
             </div>
         </div>

@@ -22,10 +22,8 @@
 			var INCLUDE_URL  = "http://oksusumarket.co.kr/include";
 			var IMAGES_URL 	 = "http://oksusumarket.co.kr/uploads";
 			var API_KEY		 = "123456789";
-			
 			//member infor
             var ADMIN_ID 	 = "";
-            
             var w = COMMON.url.urlParameter("w") == "" ? null : COMMON.url.urlParameter("w");
         </script>  
     </head>
@@ -74,12 +72,12 @@
 
                             <div class="menu_hide">
                                 <ul>
-                                    <li><a href="#">전체</a></li>
-                                    <li><a href="#">포인트</a></li>
+                                    <li><a href="../recover_admin/mb_list.html">전체</a></li>
+                                    <li><a href="">포인트</a></li>
                                     <li><a href="#">캐쉬</a></li>
                                     <li><a href="#">캐쉬 출금 신청</a></li>
                                     <li><a href="#">패스워드 찾기</a></li>
-                                    <li><a href="#">over_member</a></li>
+                                    <li><a href="../recover_admin/member_over_list.html">over_member</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -200,10 +198,9 @@
                 </div>
 
                 <div class="right_content">
-
                     <div class="rc_top text_20_b">
                         <div class="rct_left">
-                            <img class = "icon_img" src="./images/icons_7.png" alt="">관리자 리스트(2)
+                            <img class = "icon_img" src="./images/icons_12.png" alt="">Point Calculate List (5)
                         </div>
 
                         <div class="rct_right">
@@ -221,7 +218,6 @@
                     </div>
 
                     <div class="rc_search_box">
-
                         <div class="rcsb_left">
                         </div>
 
@@ -248,35 +244,76 @@
                         <table>
                             <colgroup>
                                 <col width="3%">
+                                <col width="5%">
+                                <col width="15%">
                                 <col width="7%">
-                                <col width="10%">
-                                <col width="10%">
-                                <col width="*">
-                                <col width="10%">
                                 <col width="7%">
+                                <col width="7%">
+                                <col width="7%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="3%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="8%">
                             </colgroup>
 
                             <thead>
                                 <tr>
                                     <th><input type="checkbox" name="chk_all" class="chk_all"></th>
-                                    <th>번호<i class="fas fa-sort"></i></th>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>등록/수정일</th>
-                                    <th>RegDate<i class="fas fa-sort"></i></th>
+                                    <th>seq</th>
+                                    <th>storeNM</th>
+                                    <th>busi_num</th>
+                                    <th>po_seq</th>
+                                    <th>po_point</th>
+                                    <th>use_point</th>
+                                    <th>payment</th>
+                                    <th>user</th>
+                                    <th>seller</th>
+                                    <th>shop</th>
+                                    <th>payment_date</th>
+                                    <th>reg_date</th>
                                     <th>수정 / 삭제</th>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                <tr class = "bg_<?php echo $i%2;?>">
-                                    <td class = "t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
-                                    <td class = "t_center seq">1</td>
-                                    <td class = "t_center">admin</td>
-                                    <td class="t_center">관리자</td>
-                                    <td class="t_center">2019-09-27 17:46:43 / 2019-09-27 17:46:43</td>
-                                    <td class = "t_center">2020-02-25</td>
-                                    <td class = "t_center">
+                                <tr class = "bg_0">
+                                    <td class="t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class="t_center seq">369</td>
+                                    <td class="t_center">느낌</td>
+                                    <td class="t_center">6073495981</td>
+                                    <td class="t_center">6819</td>
+                                    <td class="t_center">50,000 P</td>
+                                    <td class="t_center">30,000 P</td>
+                                    <td class="t_center">N</td>
+                                    <td class="t_center">50.00</td>
+                                    <td class="t_center">25.00</td>
+                                    <td class="t_center">25.00</td>
+                                    <td class="t_center">0000-00-00 00:00:00</td>
+                                    <td class="t_center">2020-01-28 14:26:52</td>
+                                    <td class="t_center">
+                                        <input type="button" value="수정" class="btn_u" fname="admin_modify">
+                                        <input type="button" value="삭제" class="btn_d" fname="admin_modify">
+                                    </td>
+                                </tr>
+
+                                <tr class = "bg_1">
+                                    <td class="t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class="t_center seq">368</td>
+                                    <td class="t_center">느낌</td>
+                                    <td class="t_center">6073495981</td>
+                                    <td class="t_center">6819</td>
+                                    <td class="t_center">50,000 P</td>
+                                    <td class="t_center">30,000 P</td>
+                                    <td class="t_center">N</td>
+                                    <td class="t_center">50.00</td>
+                                    <td class="t_center">25.00</td>
+                                    <td class="t_center">25.00</td>
+                                    <td class="t_center">0000-00-00 00:00:00</td>
+                                    <td class="t_center">2020-01-28 14:26:52</td>
+                                    <td class="t_center">
                                         <input type="button" value="수정" class="btn_u" fname="admin_modify">
                                         <input type="button" value="삭제" class="btn_d" fname="admin_modify">
                                     </td>
@@ -291,7 +328,6 @@
                     </div>
                 </div>                
             </div>
-
             <div class="footer">
             </div>
         </div>

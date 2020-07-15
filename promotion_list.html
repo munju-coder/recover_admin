@@ -59,10 +59,10 @@
                                     <li><a href="../recover_admin/admin_list.html">관리자목록</a></li>
                                     <li><a href="../recover_admin/admin_list.html">관리자설정</a></li>
                                     <li><a href="../recover_admin/category_list.html">카테고리</a></li>
-                                    <li><a href="../recover_admin/promotion_list.html">promotion</a></li>
+                                    <li><a href="#">promotion</a></li>
                                     <li><a href="#">HDD</a></li>
                                     <li><a href="#">HardWare</a></li>
-                                    <li><a href="../recover_admin/product_kim.html">KYM</a></li>
+                                    <li><a href="#">KYM</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -203,7 +203,7 @@
 
                     <div class="rc_top text_20_b">
                         <div class="rct_left">
-                            <img class = "icon_img" src="./images/icons_7.png" alt="">관리자 리스트(2)
+                            <img class = "icon_img" src="./images/icons_9.png" alt="icon image">Promotion List (10)
                         </div>
 
                         <div class="rct_right">
@@ -220,38 +220,16 @@
                         </div> -->
                     </div>
 
-                    <div class="rc_search_box">
-
-                        <div class="rcsb_left">
-                        </div>
-
-                        <div class="rcsb_right">
-                            <form name="Gsearch" method="get">
-                                <select name="sfl" id="sfl">
-                                    <option value="se_date" selected>기간검색</option>
-                                    <option value="mb_id">ID</option>
-                                    <option value="mb_name">Name</option>
-                                </select>
-
-                                <input type = "text" id = "start_date" name = "start_date" placeholder = "시작일">
-                                <span id = "se_devide"> ~ </span>
-                                <input type = "text" id = "end_date" name = "end_date" placeholder = "종료일">
-
-                                <input name="page" value="1" type="hidden">
-                                <input type="text" name="stx" id="stx">
-                                <input type="submit" value="검색">
-                            </form>
-                        </div>
-                    </div>
-
                     <div class="rc_middle">
                         <table>
                             <colgroup>
                                 <col width="3%">
                                 <col width="7%">
-                                <col width="10%">
-                                <col width="10%">
-                                <col width="*">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="15%">
+
+                                <col width="15%">
                                 <col width="10%">
                                 <col width="7%">
                             </colgroup>
@@ -260,23 +238,102 @@
                                 <tr>
                                     <th><input type="checkbox" name="chk_all" class="chk_all"></th>
                                     <th>번호<i class="fas fa-sort"></i></th>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>등록/수정일</th>
-                                    <th>RegDate<i class="fas fa-sort"></i></th>
+                                    <th>카테고리 타입</th>
+                                    <th>카테고리 이름</th>
+                                    <th>순서</th>
+                                    
+                                    <th>category_value</th>
+                                    <th>category_sub_value</th>
                                     <th>수정 / 삭제</th>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                <tr class = "bg_<?php echo $i%2;?>">
+                                <tr class = "bg_0">
                                     <td class = "t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
                                     <td class = "t_center seq">1</td>
-                                    <td class = "t_center">admin</td>
-                                    <td class="t_center">관리자</td>
-                                    <td class="t_center">2019-09-27 17:46:43 / 2019-09-27 17:46:43</td>
-                                    <td class = "t_center">2020-02-25</td>
-                                    <td class = "t_center">
+                                    <td class = "t_center">pd_category</td>
+                                    <td class="t_center">패션</td>
+                                    <td class = "t_center">1</td>
+                                    
+                                    <td class = "t_center">1</td>
+                                    <td class="t_center">0</td>
+                                    <td class = "text_c">
+                                        <input type="button" value="수정" class="btn_u" fname="admin_modify">
+                                        <input type="button" value="삭제" class="btn_d" fname="admin_modify">
+                                    </td>
+                                </tr>
+
+                                <tr class = "bg_1">
+                                    <td class = "t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class = "t_center seq">2</td>
+                                    <td class = "t_center">pd_category</td>
+                                    <td class="t_center">뷰티</td>
+                                    <td class = "t_center">2</td>
+                                    
+                                    <td class = "t_center">2</td>
+                                    <td class="t_center">0</td>
+                                    <td class = "text_c">
+                                        <input type="button" value="수정" class="btn_u" fname="admin_modify">
+                                        <input type="button" value="삭제" class="btn_d" fname="admin_modify">
+                                    </td>
+                                </tr>
+
+                                <tr class = "bg_0">
+                                    <td class = "t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class = "t_center seq">3</td>
+                                    <td class = "t_center">pd_category</td>
+                                    <td class="t_center">생활가전</td>
+                                    <td class = "t_center">3</td>
+                                    
+                                    <td class = "t_center">3</td>
+                                    <td class="t_center">0</td>
+                                    <td class = "text_c">
+                                        <input type="button" value="수정" class="btn_u" fname="admin_modify">
+                                        <input type="button" value="삭제" class="btn_d" fname="admin_modify">
+                                    </td>
+                                </tr>
+
+                                <tr class = "bg_1">
+                                    <td class = "t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class = "t_center seq">4</td>
+                                    <td class = "t_center">pd_category</td>
+                                    <td class="t_center">식품</td>
+                                    <td class = "t_center">4</td>
+                                    
+                                    <td class = "t_center">4</td>
+                                    <td class="t_center">0</td>
+                                    <td class = "text_c">
+                                        <input type="button" value="수정" class="btn_u" fname="admin_modify">
+                                        <input type="button" value="삭제" class="btn_d" fname="admin_modify">
+                                    </td>
+                                </tr>
+
+                                <tr class = "bg_0">
+                                    <td class = "t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class = "t_center seq">5</td>
+                                    <td class = "t_center">pd_category</td>
+                                    <td class="t_center">건강</td>
+                                    <td class = "t_center">5</td>
+                                    
+                                    <td class = "t_center">5</td>
+                                    <td class="t_center">0</td>
+                                    <td class = "text_c">
+                                        <input type="button" value="수정" class="btn_u" fname="admin_modify">
+                                        <input type="button" value="삭제" class="btn_d" fname="admin_modify">
+                                    </td>
+                                </tr>
+
+                                <tr class = "bg_1">
+                                    <td class = "t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
+                                    <td class = "t_center seq">5</td>
+                                    <td class = "t_center">pd_sub_category</td>
+                                    <td class="t_center">의류</td>
+                                    <td class = "t_center">5</td>
+                                    
+                                    <td class = "t_center">5</td>
+                                    <td class="t_center">0</td>
+                                    <td class = "text_c">
                                         <input type="button" value="수정" class="btn_u" fname="admin_modify">
                                         <input type="button" value="삭제" class="btn_d" fname="admin_modify">
                                     </td>
@@ -285,15 +342,25 @@
                         </table>
                     </div>
 
+                    <div class="rc_bottom form_btn t_left">
+                        <input type="submit" class = "" value="선택 삭제">
+                        <input type="button" class = "" value="승인">
+                    </div>
+
                     <div class="rc_bottom">
                         <div class = "page">
+                            
 						</div>
                     </div>
+
                 </div>                
+
             </div>
 
             <div class="footer">
+            
             </div>
+
         </div>
     </body>
 </html> 
