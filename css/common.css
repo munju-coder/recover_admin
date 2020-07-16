@@ -5,11 +5,8 @@
 .over_visible { overflow: visible; }
 .word_break { word-break: keep-all; }
 .white_space { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; display: block; }
-.fa-reply {
-    transform: rotate(180deg);
-    padding: 0px 7px;
-    color: #2a4d8c !important;
-}
+.fa-reply { transform: rotate(180deg); padding: 0px 7px; color: #2a4d8c !important; }
+.key_color { color: #ff3f5f; }
 /*text-align*/
 .t_left { text-align: left; }
 .t_center { text-align: center; }
@@ -17,7 +14,6 @@
 .t_end { text-align: end; }
 .fw_bold { font-weight: bold; }
 .fw_initial { font-weight: initial; }
-
 
 /*font-size*/
 .f12 { font-size: 12px; }
@@ -33,6 +29,7 @@
 /*margin*/
 .mt10px { margin-top: 10px; }
 .mt20px { margin-top: 20px; }
+.mb5px { margin-bottom: 5px; }
 .mb10px { margin-bottom: 20px; }
 .mb20px { margin-bottom: 20px; }
 
