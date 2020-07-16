@@ -28,6 +28,7 @@
     </head>
 
     <body>
+        <!--wrap {-->
         <div class="wrap">
             <div class="header">
                 <div class="hd_img"><img src="../recover_admin/images/recover_ad_logo.png" alt="recover admin logo"></div>
@@ -42,7 +43,9 @@
                 </div>
             </div>
 
+            <!--content {-->
             <div class="content">
+                <!--left_content {-->
                 <div class="left_content">
                     <div class="left_menu">
                         <div class="menu_box">
@@ -52,7 +55,7 @@
 
                             <div class="menu_hide">
                                 <ul>
-                                    <li><a href="#">기본설정</a></li>
+                                    <li><a href="../recover_admin/board/adm_set_modify.html">기본설정</a></li>
                                     <li><a href="../recover_admin/admin_list.html">관리자목록</a></li>
                                     <li><a href="../recover_admin/admin_list.html">관리자설정</a></li>
                                     <li><a href="../recover_admin/category_list.html">카테고리</a></li>
@@ -72,10 +75,10 @@
                             <div class="menu_hide">
                                 <ul>
                                     <li><a href="../recover_admin/mb_list.html">전체</a></li>
-                                    <li><a href="">포인트</a></li>
-                                    <li><a href="#">캐쉬</a></li>
-                                    <li><a href="#">캐쉬 출금 신청</a></li>
-                                    <li><a href="#">패스워드 찾기</a></li>
+                                    <li><a href="../recover_admin/board/mb_g5_point_list.html">포인트</a></li>
+                                    <li><a href="../recover_admin/mb_cash_list.html">캐쉬</a></li>
+                                    <li><a href="../recover_admin/cash_withdrawal_list.html">캐쉬 출금 신청</a></li>
+                                    <li><a href="../recover_admin/board/temporary_passwd.html">패스워드 찾기</a></li>
                                     <li><a href="../recover_admin/member_over_list.html">over_member</a></li>
                                 </ul>
                             </div>
@@ -100,7 +103,7 @@
 
                             <div class="menu_hide">
                                 <ul>
-                                    <li><a href="#">전체</a></li>
+                                    <li><a href="../recover_admin/product_list.html">전체</a></li>
                                     <li><a href="../recover_admin/product_qa_list.html">상품문의</a></li>
                                 </ul>
                             </div>
@@ -113,12 +116,12 @@
 
                             <div class="menu_hide">
                                 <ul>
-                                    <li><a href="#">전체</a></li>
+                                    <li><a href="../recover_admin/order_list.html">전체</a></li>
                                     <li><a href="../recover_admin/order_list.html">카드</a></li>
-                                    <li><a href="#">무통장</a></li>
-                                    <li><a href="#">건강검진</a></li>
-                                    <li><a href="#">주문변경</a></li>
-                                    <li><a href="#">개인결제</a></li>
+                                    <li><a href="../recover_admin/order_list.html">무통장</a></li>
+                                    <li><a href="../recover_admin/order_health_list.html">건강검진</a></li>
+                                    <li><a href="../recover_admin/order_request_list.html">주문변경</a></li>
+                                    <li><a href="../recover_admin/order_private_list.html">개인결제</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -130,7 +133,7 @@
 
                             <div class="menu_hide">
                                 <ul>
-                                    <li><a href="#">hp_seller</a></li>
+                                    <li><a href="../recover_admin/board/hp_seller_list.html">hp_seller</a></li>
                                     <li><a href="#">정산</a></li>
                                 </ul>
                             </div>
@@ -143,9 +146,9 @@
 
                             <div class="menu_hide">
                                 <ul>
-                                    <li><a href="#">공지사항</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="#">Q&A</a></li>
+                                    <li><a href="../recover_admin/board/board_list.html">공지사항</a></li>
+                                    <li><a href="../recover_admin/board/board_faq_list.html">FAQ</a></li>
+                                    <li><a href="../recover_admin/board/board_qna_list.html">Q&A</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -157,7 +160,7 @@
 
                             <div class="menu_hide">
                                 <ul>
-                                    <li><a href="../recover_admin/contetnt_list.html">내용관리</a></li>
+                                    <li><a href="../recover_admin/content_list.html">내용관리</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -190,16 +193,21 @@
 
                         <div class="menu_box">
                             <div class="menu_btn">
-                                <img src="../recover_admin/images/icons_10.png" alt="icon image">POPUP<i class="fas fa-chevron-down"></i>
+                                <a class="f_white_color" href="../recover_admin/board/popup_list.html"><img src="../recover_admin/images/icons_10.png" alt="icon image">POPUP<i class="fas fa-chevron-down"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!--} left_content-->
 
+                <!--right_content {-->
                 <div class="right_content">
                     <div class="rc_top text_20_b">INDEX</div>
+                    <!--rc_middle {-->
                     <div class="rc_middle">
+                        <!--order_box {-->
                         <div class="order_box">
+                            <!--rcm_left {-->
                             <div class="rcm_left">
                                 <div class="rcm_subject">Last Order</div>
                                 <div class="rcm_table">
@@ -295,7 +303,9 @@
                                     </table>
                                 </div>
                             </div>
+                            <!--} rcm_left-->
 
+                            <!--rcm_right {-->
                             <div class="rcm_right">
                                 <div class="rcm_subject">Today Confirm</div>
                                 <div class="rcm_table">
@@ -341,7 +351,9 @@
                                     </table>
                                 </div>
                             </div>
+                            <!--} rcm_right-->
                         </div>
+                        <!--} order_box-->
 
                         <div class="calendar_box"></div>
                         <div class="board_box">
@@ -389,12 +401,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="rc_bottom">
-                    </div>
+                    <!--} rc_middle-->
+
+                    <div class="rc_bottom"></div>
                 </div>
+                <!--} right_content-->
             </div>
-            <div class="footer">
-            </div>
+            <!--} content-->
+            <div class="footer"></div>
         </div>
+        <!--} wrap-->
     </body>
 </html> 

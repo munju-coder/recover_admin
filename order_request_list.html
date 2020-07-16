@@ -200,12 +200,12 @@
                 <div class="right_content">
                     <div class="rc_top text_20_b">
                         <div class="rct_left">
-                            <img class = "icon_img" src="./images/icons_15.png" alt="">상품문의 (2)
+                            <i class="fas fa-list"></i> Order Change request (0)
                         </div>
 
-                        <div class="rct_right">
-                            <!-- <button class = "btn_w" fname="admin_modify">등록</button> -->
-                        </div>
+                        <!-- <div class="rct_right">
+                            <button class = "btn_w" fname="admin_modify">등록</button>
+                        </div> -->
 
                         <!-- <div class="rct_right">
                             <button class = "btn_excel">정산</button>
@@ -247,83 +247,74 @@
                         <table>
                             <colgroup>
                                 <col width="2%">
-                                <col width="2%">
+                                <col width="3%">
+                                <col width="4%">
+                                <col width="4%">
                                 <col width="5%">
-                                <col width="5%">
-                                <col width="5%">
+                                <col width="3%">
+                                <col width="10%">
                                 <col width="7%">
-                                <col width="18%">
-                                <col width="5%">
+                                <col width="15%">
+                                <col width="7%">
                             </colgroup>
 
                             <thead>
                                 <tr>
                                     <th><input type="checkbox" name="chk_all" class="chk_all"></th>
-                                    <th>번호</th>
-                                    <th>승인</th>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>PD info</th>
-                                    <th>문의내용</th>
-                                    <th>등록일<i class="fas fa-sort"></i></th>
+                                    <th>seq</th>
+                                    <th>mb_id</th>
+                                    <th>order_id</th>
+                                    <th>order_no</th>
+                                    <th>request</th>
+                                    <th>content</th>
+                                    <th>mb_info</th>
+                                    <th>pd_info</th>
+                                    <th>reg_date</th>
                                 </tr>
-                            </thead>
+                           </thead>
 
                             <tbody>
                                 <tr class = "bg_0">
                                     <td class="t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
                                     <td class="t_center seq">2</td>
-                                    <td class="t_center">Y</td>
-                                    <td class="t_center">test1</td>
-                                    <td class="t_center">test1</td>
-                                    <td class="t_center pr_info">
-                                        <div class="w30 mt10px"><img class="w100" src="../recover_admin/images/product_1.png" alt="product_1 image"></div>
-                                        <div class="w70 mt10px">
-                                            <ul>
-                                                <li>상품명 : <span>여성 더블 후드 트레이닝 3종 세트</span></li>
-                                                <li>가격 : <span>80,000</span>원</li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                    <td class="t_center">상품문의드립니다.<br><i class="fas fa-reply"></i>문제없는거에요~</td>
-                                    <td class="t_center">2019-10-14 09:27:23</td>
+                                    <td class="t_center">test</td>
+                                    <td class="t_center">ttt</td>
+                                    <td class="t_center"></td>
+                                    <td class="t_center"></td>
+                                    <td class="t_center"></td>
+                                    <td class="t_center"></td>
+                                    <td class="t_center">test</td>
+                                    <td class="t_center">2019-10-24 14:10:00</td>
                                 </tr>
 
                                 <tr class = "bg_1">
                                     <td class="t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
                                     <td class="t_center seq">1</td>
-                                    <td class="t_center">Y</td>
-                                    <td class="t_center">test1</td>
-                                    <td class="t_center">test1</td>
-                                    <td class="t_center pr_info">
-                                        <div class="w30 mt10px"><img class="w100" src="../recover_admin/images/product_1.png" alt="product_1 image"></div>
-                                        <div class="w70 mt10px">
-                                            <ul>
-                                                <li>상품명 : <span>여성 더블 후드 트레이닝 3종 세트</span></li>
-                                                <li>가격 : <span>80,000</span>원</li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                    <td class="t_center">상품문의드립니다.<br><i class="fas fa-reply"></i>문제없는거에요~</td>
-                                    <td class="t_center">2019-10-14 09:27:23</td>
+                                    <td class="t_center">test</td>
+                                    <td class="t_center">ttt</td>
+                                    <td class="t_center"></td>
+                                    <td class="t_center"></td>
+                                    <td class="t_center"></td>
+                                    <td class="t_center"></td>
+                                    <td class="t_center">test</td>
+                                    <td class="t_center">2019-10-24 14:10:00</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     
-                    <div class="rc_bottom form_btn t_left">
-                        <input type="submit" class = "" value="선택 삭제">
-                        <input type="button" class = "" value="승인">
-                    </div>
+                    <!-- <div class="rc_bottom form_btn">
+                        <input type="submit" class = "wm_btn" value="등록">
+                        <input type="button" class = "cancel_btn" value="선택삭제">
+                    </div> -->
 
                     <div class="rc_bottom">
-                        <div class = "page">
-						</div>
+                        <div class = "page"></div>
                     </div>
                 </div>                
             </div>
-            <div class="footer">
-            </div>
+
+            <div class="footer"></div>
         </div>
     </body>
 </html> 

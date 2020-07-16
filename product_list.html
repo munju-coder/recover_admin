@@ -200,7 +200,7 @@
                 <div class="right_content">
                     <div class="rc_top text_20_b">
                         <div class="rct_left">
-                            <img class = "icon_img" src="./images/icons_15.png" alt="">상품문의 (2)
+                            <img class = "icon_img" src="./images/icons_15.png" alt="">상품 리스트 (2,582)
                         </div>
 
                         <div class="rct_right">
@@ -217,24 +217,46 @@
                         </div> -->
                     </div>
 
+                    
+
                     <div class="rc_search_box">
                         <div class="rcsb_left">
-                            <!-- <ul>
-                                <li><span class="fw_bold">상세검색</span></li>
-                            </ul> -->
+                            <form name="Gsearch" method="get">
+                                <select id="promotion_list" name="promotion_list">
+                                    <option value="">promotion_select</option>
+                                    <option value="1">리커버랭킹</option>
+                                    <option value="3">여름생활가전</option>
+                                    <option value="5">투데이특가</option>
+                                    <option value="6">건강검진 이벤트</option>
+                                    <option value="10">핫딜</option>
+                                </select>
+
+                                <select id="pd_category" name="pd_category">
+                                    <option value="">category_select</option>
+                                    <option value="1">패션</option>
+                                    <option value="2">뷰티</option>
+                                    <option value="3">생활가전</option>
+                                    <option value="4">식품</option>
+                                    <option value="5">건강</option>
+                                    <option value="6">인테리어</option>
+                                    <option value="7">잡화</option>
+                                    <option value="8">생활용품</option>
+                                    <option value="9">기타</option>
+                                </select>
+                            </form>
                         </div>
 
                         <div class="rcsb_right">
                             <form name="Gsearch" method="get">
                                 <select name="sfl" id="sfl">
-                                    <option value="se_date" selected>기간검색</option>
-                                    <option value="mb_id">ID</option>
-                                    <option value="mb_name">Name</option>
+                                    <!-- <option value="se_date" selected>기간검색</option> -->
+                                    <option value="mb_id">상품명</option>
+                                    <option value="mb_name">매입처</option>
                                 </select>
 
-                                <input type = "text" id = "start_date" name = "start_date" placeholder = "시작일">
+                                <!-- <input type = "text" id = "start_date" name = "start_date" placeholder = "시작일">
                                 <span id = "se_devide"> ~ </span>
-                                <input type = "text" id = "end_date" name = "end_date" placeholder = "종료일">
+                                <input type = "text" id = "end_date" name = "end_date" placeholder = "종료일"> -->
 
                                 <input name="page" value="1" type="hidden">
                                 <input type="text" name="stx" id="stx">
@@ -247,24 +269,28 @@
                         <table>
                             <colgroup>
                                 <col width="2%">
+                                <col width="3%">
                                 <col width="2%">
-                                <col width="5%">
-                                <col width="5%">
-                                <col width="5%">
-                                <col width="7%">
-                                <col width="18%">
-                                <col width="5%">
+                                <col width="4%">
+                                <col width="4%">
+                                <col width="4%">
+                                <col width="20%">
+                                <col width="4%">
+                                <col width="3%">
+                                <col width="3%">
                             </colgroup>
 
                             <thead>
                                 <tr>
                                     <th><input type="checkbox" name="chk_all" class="chk_all"></th>
-                                    <th>번호</th>
+                                    <th>seq</th>
                                     <th>승인</th>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>PD info</th>
-                                    <th>문의내용</th>
+                                    <th>프로모션</th>
+                                    <th>카테고리</th>
+                                    <th>카테고리S</th>
+                                    <th>상품정보</th>
+                                    <th>판매가</th>
+                                    <th>재고</th>
                                     <th>등록일<i class="fas fa-sort"></i></th>
                                 </tr>
                             </thead>
@@ -272,43 +298,66 @@
                             <tbody>
                                 <tr class = "bg_0">
                                     <td class="t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
-                                    <td class="t_center seq">2</td>
+                                    <td class="t_center seq">2582</td>
                                     <td class="t_center">Y</td>
-                                    <td class="t_center">test1</td>
-                                    <td class="t_center">test1</td>
-                                    <td class="t_center pr_info">
-                                        <div class="w30 mt10px"><img class="w100" src="../recover_admin/images/product_1.png" alt="product_1 image"></div>
-                                        <div class="w70 mt10px">
+                                    <td class="t_center">투데이특가</td>
+                                    <td class="t_center">식품</td>
+                                    <td class="t_center">음료</td>
+                                    <td class="t_center pr_info pro_list_info">
+                                        <div class="mt10px"><img class="w100" src="../recover_admin/images/product_2.jpg" alt="product_1 image"></div>
+                                        <div class="mt10px">
                                             <ul>
-                                                <li>상품명 : <span>여성 더블 후드 트레이닝 3종 세트</span></li>
-                                                <li>가격 : <span>80,000</span>원</li>
+                                                <li class="t_left mb5px">상품명 : <span>여성 더블 후드 트레이닝 3종 세트</span></li>
+                                                <li class="t_left mb5px">가격 : <span>80,000</span>원</li>
+                                                <li class="t_left mb5px">포인트 : <span>4,000</span>원</li>
+                                                <li class="t_left naver_compare"><a class="f_white_color" href="">네이버 가격비교</a></li>
                                             </ul>
                                         </div>
                                     </td>
-                                    <td class="t_center">상품문의드립니다.<br><i class="fas fa-reply"></i>문제없는거에요~</td>
-                                    <td class="t_center">2019-10-14 09:27:23</td>
+                                    <td class="t_center"><span>20,000</span>원</td>
+                                    <td class="t_center"><span>0</span>개</td>
+                                    <td class="t_center">2019-10-14</td>
                                 </tr>
 
                                 <tr class = "bg_1">
                                     <td class="t_center"><input type="checkbox" id="chk_<?php echo $i;?>" name="chk[]" value = "1"></td>
-                                    <td class="t_center seq">1</td>
+                                    <td class="t_center seq">2581</td>
                                     <td class="t_center">Y</td>
-                                    <td class="t_center">test1</td>
-                                    <td class="t_center">test1</td>
-                                    <td class="t_center pr_info">
-                                        <div class="w30 mt10px"><img class="w100" src="../recover_admin/images/product_1.png" alt="product_1 image"></div>
-                                        <div class="w70 mt10px">
+                                    <td class="t_center">투데이특가</td>
+                                    <td class="t_center">식품</td>
+                                    <td class="t_center">가공</td>
+                                    <td class="t_center pr_info pro_list_info">
+                                        <div class="mt10px"><img class="w100" src="../recover_admin/images/product_3.jpg" alt="product_1 image"></div>
+                                        <div class="mt10px">
                                             <ul>
-                                                <li>상품명 : <span>여성 더블 후드 트레이닝 3종 세트</span></li>
-                                                <li>가격 : <span>80,000</span>원</li>
+                                                <li class="t_left mb5px">상품명 : <span>여성 더블 후드 트레이닝 3종 세트</span></li>
+                                                <li class="t_left mb5px">가격 : <span>80,000</span>원</li>
+                                                <li class="t_left mb5px">포인트 : <span>4,000</span>원</li>
+                                                <li class="t_left naver_compare"><a class="f_white_color" href="">네이버 가격비교</a></li>
                                             </ul>
                                         </div>
                                     </td>
-                                    <td class="t_center">상품문의드립니다.<br><i class="fas fa-reply"></i>문제없는거에요~</td>
-                                    <td class="t_center">2019-10-14 09:27:23</td>
+                                    <td class="t_center"><span>18,000</span>원</td>
+                                    <td class="t_center"><span>100</span>개</td>
+                                    <td class="t_center">2019-10-14</td>
                                 </tr>
+
                             </tbody>
                         </table>
+                    </div>
+
+                    <div class="option_box mt20px">
+						<input type="button" class = "fw_bold option o_active" value="등록">
+						<input type="button" class = "fw_bold option" value="수정">
+						<input type="button" class = "fw_bold option" value="삭제">
+					</div>
+
+                    <div class="promotion_btn_box mt10px">	
+                        <input type="button" class="fw_bold pbb_btn" value="투데이특가">
+                        <input type="button" class="fw_bold pbb_btn" value="핫딜">
+                        <input type="button" class="fw_bold pbb_btn" value="여름생활가전">
+                        <input type="button" class="fw_bold pbb_btn" value="건강검진 이벤트">
+                        <input type="button" class="fw_bold pbb_btn" value="리커버랭킹">
                     </div>
                     
                     <div class="rc_bottom form_btn t_left">
@@ -317,12 +366,10 @@
                     </div>
 
                     <div class="rc_bottom">
-                        <div class = "page">
-						</div>
+                        <div class = "page"></div>
                     </div>
+
                 </div>                
-            </div>
-            <div class="footer">
             </div>
         </div>
     </body>
